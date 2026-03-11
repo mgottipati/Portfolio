@@ -107,15 +107,16 @@ export const caseStudies: CaseStudy[] = [
     repo: "https://github.com/mgottipati/Canopy",
   },
   {
-    id: "star-fairy",
-    slug: "star-fairy",
-    title: "StarFairy",
-    tagline: "Browser game",
+    id: "chatbot",
+    slug: "chatbot",
+    title: "Chatbot",
+    tagline: "Conversational interface",
     role: "Side Project",
-    description: "A JavaScript browser game.",
+    description:
+      "A chatbot application built with JavaScript. Interactive conversational interface for user engagement.",
     tech: ["JavaScript"],
     gridSize: "small",
-    repo: "https://github.com/mgottipati/StarFairy",
+    repo: "https://github.com/mgottipati/Chatbot",
   },
   {
     id: "balloon-buster",

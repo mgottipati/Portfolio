@@ -232,17 +232,17 @@ const caseStudies = [
         repo: "https://github.com/mgottipati/Canopy"
     },
     {
-        id: "star-fairy",
-        slug: "star-fairy",
-        title: "StarFairy",
-        tagline: "Browser game",
+        id: "chatbot",
+        slug: "chatbot",
+        title: "Chatbot",
+        tagline: "Conversational interface",
         role: "Side Project",
-        description: "A JavaScript browser game.",
+        description: "A chatbot application built with JavaScript. Interactive conversational interface for user engagement.",
         tech: [
             "JavaScript"
         ],
         gridSize: "small",
-        repo: "https://github.com/mgottipati/StarFairy"
+        repo: "https://github.com/mgottipati/Chatbot"
     },
     {
         id: "balloon-buster",
@@ -631,15 +631,21 @@ function CaseStudyModal({ project, onClose }) {
                     open: !!project,
                     initial: {
                         opacity: 0,
-                        scale: 0.96
+                        scale: 0.96,
+                        x: "-50%",
+                        y: "-50%"
                     },
                     animate: {
                         opacity: 1,
-                        scale: 1
+                        scale: 1,
+                        x: "-50%",
+                        y: "-50%"
                     },
                     exit: {
                         opacity: 0,
-                        scale: 0.96
+                        scale: 0.96,
+                        x: "-50%",
+                        y: "-50%"
                     },
                     transition: {
                         duration: 0.2,
@@ -653,7 +659,7 @@ function CaseStudyModal({ project, onClose }) {
                     role: "dialog",
                     "aria-modal": "true",
                     "aria-labelledby": "case-study-title",
-                    className: "fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-surface-elevated p-6 shadow-xl outline-none md:p-8",
+                    className: "fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl rounded-xl border border-border bg-surface-elevated p-6 shadow-xl outline-none md:p-8",
                     onClick: (e)=>e.stopPropagation(),
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1047,7 +1053,7 @@ function About() {
                         duration: 0.5,
                         delay: 0.1
                     },
-                    className: "mt-8 space-y-6 text-lg leading-relaxed text-accent-muted",
+                    className: "mt-8 space-y-12 text-lg leading-relaxed text-accent-muted",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$case$2d$studies$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["siteConfig"].about
@@ -1056,12 +1062,79 @@ function About() {
                             lineNumber: 26,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-base text-accent-dim",
-                            children: "Education: B.S. Computer Science, University of Wisconsin–Madison (2024–2028). Certifications: AWS Certified Cloud Practitioner, iOS & Android App Developer, AI Scholars. Awards: National Merit Semifinalist, NCWIT National Award Finalist & Regional Winner, FTC State Robotics Think & Inspire."
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "space-y-1",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-mono text-xs uppercase tracking-widest text-accent-dim",
+                                    children: "Education"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/About.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-base text-accent-muted",
+                                    children: "B.S. Computer Science, University of Wisconsin–Madison (2024–2028)."
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/About.tsx",
+                                    lineNumber: 32,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/components/About.tsx",
-                            lineNumber: 27,
+                            lineNumber: 28,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "space-y-2",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-mono text-xs uppercase tracking-widest text-accent-dim",
+                                    children: "Certifications"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/About.tsx",
+                                    lineNumber: 38,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-base text-accent-muted",
+                                    children: "AWS Certified Cloud Practitioner, iOS & Android App Developer, AI Scholars."
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/About.tsx",
+                                    lineNumber: 41,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/About.tsx",
+                            lineNumber: 37,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "space-y-2",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-mono text-xs uppercase tracking-widest text-accent-dim",
+                                    children: "Awards"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/About.tsx",
+                                    lineNumber: 47,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-base text-accent-muted",
+                                    children: "National Merit Semifinalist, NCWIT National Award Finalist & Regional Winner, FTC State Robotics Think & Inspire."
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/About.tsx",
+                                    lineNumber: 50,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/About.tsx",
+                            lineNumber: 46,
                             columnNumber: 11
                         }, this)
                     ]

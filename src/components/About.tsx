@@ -21,14 +21,36 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-8 space-y-6 text-lg leading-relaxed text-accent-muted"
+          className="mt-8 space-y-12 text-lg leading-relaxed text-accent-muted"
         >
           <p>{siteConfig.about}</p>
-          <p className="text-base text-accent-dim">
-            Education: B.S. Computer Science, University of Wisconsin–Madison (2024–2028).
-            Certifications: AWS Certified Cloud Practitioner, iOS & Android App Developer, AI Scholars.
-            Awards: National Merit Semifinalist, NCWIT National Award Finalist & Regional Winner, FTC State Robotics Think & Inspire.
-          </p>
+
+          <div className="space-y-1">
+            <h3 className="font-mono text-xs uppercase tracking-widest text-accent-dim">
+              Education
+            </h3>
+            <p className="text-base text-accent-muted">
+              B.S. Computer Science, University of Wisconsin–Madison (2024–2028).
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-mono text-xs uppercase tracking-widest text-accent-dim">
+              Certifications
+            </h3>
+            <p className="text-base text-accent-muted">
+              AWS Certified Cloud Practitioner, iOS & Android App Developer, AI Scholars.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-mono text-xs uppercase tracking-widest text-accent-dim">
+              Awards
+            </h3>
+            <p className="text-base text-accent-muted">
+              National Merit Semifinalist, NCWIT National Award Finalist & Regional Winner, FTC State Robotics Think & Inspire.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -37,14 +37,14 @@ export function CaseStudyModal({ project, onClose }: CaseStudyModalProps) {
           />
           <motion.dialog
             open={!!project}
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.96 }}
+            initial={{ opacity: 0, scale: 0.96, x: "-50%", y: "-50%" }}
+            animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
+            exit={{ opacity: 0, scale: 0.96, x: "-50%", y: "-50%" }}
             transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
             role="dialog"
             aria-modal="true"
             aria-labelledby="case-study-title"
-            className="fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-surface-elevated p-6 shadow-xl outline-none md:p-8"
+            className="fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl rounded-xl border border-border bg-surface-elevated p-6 shadow-xl outline-none md:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             <div
