@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-geist-sans: "Geist", system-ui, sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-display: "Instrument Serif", "Georgia", serif;
+  --surface: #0f172a;
+  --surface-elevated: #1e293b;
+  --border: rgba(148, 163, 184, 0.14);
+  --accent: #e2e8f0;
+  --accent-muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface);
+  color: var(--accent);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle selection */
+::selection {
+  background: rgba(148, 163, 184, 0.25);
+  color: #f8fafc;
+}
