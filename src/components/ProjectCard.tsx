@@ -10,7 +10,13 @@ const gridCols: Record<CaseStudy["gridSize"], string> = {
   wide: "md:col-span-3",
 };
 
-export function ProjectCard({ project, index }: { project: CaseStudy; index: number }) {
+type ProjectCardProps = {
+  project: CaseStudy;
+  index: number;
+  onSelect: () => void;
+};
+
+export function ProjectCard({ project, index, onSelect }: ProjectCardProps) {
   const accentStyle = project.accent ? { borderColor: project.accent } : undefined;
 
   return (
@@ -23,7 +29,11 @@ export function ProjectCard({ project, index }: { project: CaseStudy; index: num
         delay: index * 0.08,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className={`group relative overflow-hidden rounded-xl border border-border bg-surface-elevated p-6 transition-colors hover:border-border-hover hover:bg-surface-muted ${gridCols[project.gridSize]}`}
+      role="button"
+      tabIndex={0}
+      onClick={onSelect}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onSelect())}
+      className={`group relative cursor-pointer overflow-hidden rounded-xl border border-border bg-surface-elevated p-6 transition-colors hover:border-border-hover hover:bg-surface-muted focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-surface ${gridCols[project.gridSize]}`}
     >
       <div
         className="absolute left-0 top-0 h-px w-full opacity-60 transition-opacity group-hover:opacity-100"
@@ -51,7 +61,7 @@ export function ProjectCard({ project, index }: { project: CaseStudy; index: num
             </span>
           ))}
         </div>
-        <div className="mt-4 flex gap-4">
+        <div className="mt-4 flex gap-4" onClick={(e) => e.stopPropagation()}>
           {project.repo && (
             <a
               href={project.repo}

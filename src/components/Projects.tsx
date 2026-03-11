@@ -1,10 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { caseStudies } from "@/data/case-studies";
+import type { CaseStudy } from "@/types/case-study";
 import { ProjectCard } from "./ProjectCard";
+import { CaseStudyModal } from "./CaseStudyModal";
 
 export function Projects() {
+  const [selectedProject, setSelectedProject] = useState<CaseStudy | null>(null);
+
   return (
     <section id="work" className="border-t border-border px-6 py-24 md:px-8">
       <div className="mx-auto max-w-6xl">
@@ -29,10 +34,16 @@ export function Projects() {
 
         <div className="mt-16 grid grid-flow-dense grid-cols-1 gap-6 md:grid-cols-3 md:gap-6 md:auto-rows-[minmax(200px,auto)]">
           {caseStudies.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              onSelect={() => setSelectedProject(project)}
+            />
           ))}
         </div>
       </div>
+      <CaseStudyModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </section>
   );
 }
