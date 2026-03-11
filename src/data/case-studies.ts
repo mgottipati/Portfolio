@@ -18,12 +18,14 @@ export const caseStudies: CaseStudy[] = [
     tagline: "Real-time emotion recognition via webcam",
     role: "Personal Project",
     description:
-      "Python application that uses a pre-trained deep learning model to detect facial landmarks and classify emotional states in real time from a webcam feed.",
-    outcomes: [
-      "Real-time emotion classification",
-      "Integration of computer vision and deep learning",
-    ],
-    tech: ["Python", "Deep Learning", "Computer Vision", "OpenCV"],
+    "Engineered a high-performance computer vision application that performs real-time emotional state classification from live webcam feeds. The system utilizes a Convolutional Neural Network (CNN) architecture to analyze facial geometry and 68 distinct landmarks, mapping visual data to seven primary emotional states with low-latency inference. Optimized the preprocessing pipeline to handle varying lighting conditions and facial orientations, ensuring robust performance in real-world environments.",
+  outcomes: [
+    "Implemented a real-time facial landmark detection system using Dlib and OpenCV.",
+    "Trained and deployed a Convolutional Neural Network (CNN) for multi-class emotional classification.",
+    "Developed a multi-threaded video processing pipeline to maintain high FPS during live model inference.",
+    "Integrated a localized feedback UI to visualize confidence scores for each detected emotional state."
+  ],
+  tech: ["Python", "TensorFlow/Keras", "OpenCV", "Dlib", "NumPy"],
     gridSize: "large",
     accent: "#6366f1",
   },
@@ -98,8 +100,8 @@ export const caseStudies: CaseStudy[] = [
     tagline: "Interactive experience",
     role: "Side Project",
     description:
-      "Interactive web experience. Deployed on Vercel.",
-    tech: ["JavaScript", "Vercel"],
+    "Real-time social platform using Firebase WebSockets and Geolocation API to connect students for local study sessions. Features a gamified focus timer and instant P2P messaging.",
+  tech: ["Firebase", "JavaScript", "Geolocation API"],
     gridSize: "small",
     link: "https://canopy-lake-eight.vercel.app",
     repo: "https://github.com/mgottipati/Canopy",
