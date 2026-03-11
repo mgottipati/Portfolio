@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import type { CaseStudy } from "@/types/case-study";
 
@@ -21,7 +22,7 @@ export function CaseStudyModal({ project, onClose }: CaseStudyModalProps) {
     };
   }, [project, onClose]);
 
-  return (
+  const modalContent = (
     <AnimatePresence>
       {project && (
         <>
@@ -132,4 +133,7 @@ export function CaseStudyModal({ project, onClose }: CaseStudyModalProps) {
       )}
     </AnimatePresence>
   );
+
+  if (typeof document === "undefined") return null;
+  return createPortal(modalContent, document.body);
 }
